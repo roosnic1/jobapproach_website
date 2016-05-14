@@ -1,5 +1,8 @@
 'use strict';
 
+var notify = humane.create({ timeout: 4000, baseCls: 'humane-original' })
+
+
 function sendForm() {
 
   console.log('send form');
@@ -11,14 +14,13 @@ function sendForm() {
 
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
-    console.log(request);
     if(request.readyState === 4 && request.status === 200) {
       document.getElementById('contact_form_name').value = '';
       document.getElementById('contact_form_email').value = '';
       document.getElementById('contact_form_message').value = '';
-      
+      notify.log('Danke für ihre Nachricht. Wir melden uns in kürze');
     } else {
-      
+      notify.log('Die Nachricht wurde nicht abgeschickt. Versuchen Sie es später no einmal');
     }
   };
   request.open('POST', window.location.origin + '/sendmail.php');
