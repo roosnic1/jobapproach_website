@@ -2,11 +2,9 @@
 
 $email=$_POST['email'];
 $message=json_encode($_POST);
-$receiver="nicolas.k.roos@gmail.com";
-$mailer="test@jobapproach.ch";
+$receiver="info@jobapproach.ch";
+$mailer="contact-form@jobapproach.ch";
 
 mail($receiver,"Contact",$message,  "From:" . $mailer);
-
-//echo $message;
 
 ?>
