@@ -13,7 +13,7 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
+  // padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -27,7 +27,10 @@ body {
 
 /* Custom page header */
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 500px;
   overflow: hidden;
 
   &--image {
@@ -42,8 +45,10 @@ body {
   }
 
   &--links {
+    margin-top: 30px;
     a {
       color: #02362E;
+      font-size: 14px;
 
       &:hover {
         text-decoration: none;
@@ -54,6 +59,27 @@ body {
 
   &--quote {
     border-left: none;
+  }
+}
+
+.main-content {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  overflow: scroll;
+  height: 80%;
+
+  h1 {
+    color: #02362E;
+    font-size: 36;
+  }
+
+  .service {
+    margin-top: 140px;
+
+    p {
+      font-size: 15px;
+    }
   }
 }
 
