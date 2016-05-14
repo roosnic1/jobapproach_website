@@ -1,11 +1,8 @@
 'use strict';
 
-var notify = humane.create({ timeout: 4000, baseCls: 'humane-original' })
-
 
 function sendForm() {
-
-  console.log('send form');
+  var notify = humane.create({ timeout: 4000, baseCls: 'humane-original' });
 
   var formData = new FormData();
   formData.append('name',document.getElementById('contact_form_name').value);
@@ -19,7 +16,7 @@ function sendForm() {
       document.getElementById('contact_form_email').value = '';
       document.getElementById('contact_form_message').value = '';
       notify.log('Danke für ihre Nachricht. Wir melden uns in kürze');
-    } else {
+    } else if(request.readyState === 4) {
       notify.log('Die Nachricht wurde nicht abgeschickt. Versuchen Sie es später no einmal');
     }
   };
