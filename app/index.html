@@ -32,7 +32,7 @@
       <img src="images/background.png" class="header--image" />
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 header--title">job-------approach</div>
+          <div href="home" class="col-sm-3 header--title">job-------approach</div>
           <div class="col-sm-6 col-sm-offset-3 header--links">
             <ul class="list-inline">
               <li><a href="#service">Dienstleistungen</a></li>
@@ -53,6 +53,7 @@
 
         <div class="row">
           <div class="col-sm-5">
+            <a name="home"></a>
             <blockquote class="header--quote">
               <p>Für Wunder muss beten, für Veränderungen aber arbeiten.</p>
               <footer>Thomas von Aquin (1225-1274)</footer>
@@ -61,9 +62,10 @@
         </div>
 
 
-        <div class="service">
+        <div class="block service">
           <div class="row">
             <div class="col-sm-8">
+              <a name="service"></a>
               <h1>Dienstleistungen</h1>
             </div>
           </div>
@@ -128,35 +130,80 @@
 
         </div>
 
-        <div class="row marketing">
-          <div class="col-lg-6">
-            <h4>HTML5 Boilerplate</h4>
-            <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+        <div class="block about">
+          <div class="row">
+            <div class="col-sm-8">
+              <a name="service"></a>
+              <h1>Über mich</h1>
+            </div>
+          </div>
 
-            <h4>Sass</h4>
-            <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-            <h4>Bootstrap</h4>
-            <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-            <h4>Modernizr</h4>
-            <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+          <div class="row">
+            <div class="col-sm-2 col-sm-offset-1 text-center">
+              <img src="images/aboutme.png" class="img-rounded" />
+            </div>
+            <div class="col-sm-7 col-sm-offset-1">
+              <p>Patricia Bouchard,  Lic.phil.I, dipl. Ausbilderin FA</p>
+              <p>Seit 2002 arbeite ich mit Stellensuchenden zusammen und nehme die sich immer schneller verändernden Bedingungen auf dem Arbeitsmarkt aufmerksam wahr.</p>
+              <p>Aktuell führe ich auf Mandatsbasis Kurse für Kaderleute und Spezialisten  im Rahmen der arbeitsmarktlichen Massnahmen des Kantons Schwyz durch.</p>
+            </div>
           </div>
         </div>
 
-        <div class="row marketing">
-          <div class="col-lg-6">
-            <a name="blog"></a>
-            <h4>HTML5 Boilerplate</h4>
-            <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+        <div class="block contact">
+          <div class="row">
+            <div class="col-sm-8">
+              <a name="service"></a>
+              <h1>Kontakt</h1>
+            </div>
+          </div>
 
-            <h4>Sass</h4>
-            <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+              <p>jobApproach GmbH</p>
+              <p>Mail: info@jobpproach.ch</p>
+              <p>Phone: +41 (0)79 386 88 09</p>
+            </div>
 
-            <h4>Bootstrap</h4>
-            <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-            <h4>Modernizr</h4>
-            <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+            <div class="col-sm-6">
+              <form onsubmit="return sendForm();" class="form-horizontal">
+                <div class="form-group">
+                  <input type="text" name="name" id="contact_form_name" class="form-control" placeholder="Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" id="contact_form_email" class="form-control" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="contact_form_message" class="form-control" rows="4" placeholder="Nachricht *" required></textarea>
+                </div>
+
+
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Senden</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="block links">
+          <div class="row">
+            <div class="col-sm-8">
+              <a name="service"></a>
+              <h1>Friends</h1>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+              <ul>
+                <li>link 1</li>
+                <li>link 2</li>
+                <li>link 3</li>
+              </ul>
+            </div>
 
           </div>
         </div>
