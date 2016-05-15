@@ -178,7 +178,9 @@
                   <textarea name="message" id="contact_form_message" class="form-control" rows="4" placeholder="Nachricht *" required></textarea>
                 </div>
 
-
+                <div class="form-group">
+                  <div id="recaptcha"></div>
+                </div>
 
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Senden</button>
@@ -255,5 +257,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=recapCallback&render=explicit" async defer></script>
   </body>
 </html>

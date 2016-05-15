@@ -5,8 +5,15 @@ let req = (() => {
   let fields = ['contact_form_name', 'contact_form_email', 'contact_form_message'];
 
   return () => {
+
     let formData = new FormData();
     fields.map((field) => formData.append(field,document.getElementById(field).value));
+    if(grecaptcha.getResponse().length === 0) {
+      notify.log('Bitte bestätigen Sie dass Sie kein Roboter sind');
+      return false;
+    } else {
+      formData.append('recaptcha',grecaptcha.getResponse());
+    }
 
     let request = new XMLHttpRequest();
     request.onreadystatechange = () => {
@@ -21,5 +28,14 @@ let req = (() => {
     request.send(formData);
 
     return false;
+  };
+})();
+
+
+let recapCallback = (() => {
+  return () => {
+    grecaptcha.render('recaptcha', {
+      'sitekey' : '6Lct7x8TAAAAAEThkkPJ6Za7tkhtDAiL2_eZT-va'
+    });
   };
 })();
