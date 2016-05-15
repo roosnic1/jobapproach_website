@@ -20,12 +20,14 @@ let req = (() => {
       if(request.readyState === 4 && request.status === 200) {
         fields.map((field) => document.getElementById(field).value = '');
         notify.log('Danke für ihre Nachricht. Wir melden uns in kürze.');
+        grecaptcha.reset();
       } else if(request.readyState === 4) {
         notify.log('Die Nachricht wurde nicht abgeschickt. Versuchen Sie es später noch einmal');
       }
     };
     request.open('POST', window.location.origin + '/sendmail.php');
     request.send(formData);
+    ga('send','event','ContactForm','send');
 
     return false;
   };
