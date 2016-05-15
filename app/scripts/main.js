@@ -1,27 +1,25 @@
 'use strict';
 
+let req = (() => {
+  let notify = humane.create({ timeout: 4000, baseCls: 'humane-original' });
+  let fields = ['contact_form_name', 'contact_form_email', 'contact_form_message'];
 
-function sendForm() {
-  var notify = humane.create({ timeout: 4000, baseCls: 'humane-original' });
+  return () => {
+    let formData = new FormData();
+    fields.map((field) => formData.append(field,document.getElementById(field).value));
 
-  var formData = new FormData();
-  formData.append('name',document.getElementById('contact_form_name').value);
-  formData.append('email',document.getElementById('contact_form_email').value);
-  formData.append('message',document.getElementById('contact_form_message').value);
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = () => {
+      if(request.readyState === 4 && request.status === 200) {
+        fields.map((field) => document.getElementById(field).value = '');
+        notify.log('Danke für ihre Nachricht. Wir melden uns in kürze.');
+      } else if(request.readyState === 4) {
+        notify.log('Die Nachricht wurde nicht abgeschickt. Versuchen Sie es später noch einmal');
+      }
+    };
+    request.open('POST', window.location.origin + '/sendmail.php');
+    request.send(formData);
 
-  var request = new XMLHttpRequest();
-  request.onreadystatechange = function() {
-    if(request.readyState === 4 && request.status === 200) {
-      document.getElementById('contact_form_name').value = '';
-      document.getElementById('contact_form_email').value = '';
-      document.getElementById('contact_form_message').value = '';
-      notify.log('Danke für ihre Nachricht. Wir melden uns in kürze');
-    } else if(request.readyState === 4) {
-      notify.log('Die Nachricht wurde nicht abgeschickt. Versuchen Sie es später no einmal');
-    }
+    return false;
   };
-  request.open('POST', window.location.origin + '/sendmail.php');
-  request.send(formData);
-
-  return false;
-};
+})();
