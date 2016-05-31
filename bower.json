@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "humane-js": "humane#^3.2.2"
+    "humane-js": "humane#^3.2.2",
+    "normalize-css": "^4.1.1"
   },
   "overrides": {
     "bootstrap-sass": {
