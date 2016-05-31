@@ -25,6 +25,10 @@ body {
   padding-right: 15px;
 }
 
+.footer {
+  margin-top: 200px
+}
+
 /* Custom page header */
 .header {
   position: fixed;
@@ -41,13 +45,13 @@ body {
     position: absolute;
     width: 100%;
     opacity: 0.5;
+    filter: brightness(2.5);
+    -webkit-filter: brightness(2.5);
   }
 
   &--title {
-    font-size: 37px;
-    color: #00C9C4;
-    line-height: 35px;
-    margin-top: 30px;
+    margin-top: 20px;
+    width: 210px;
   }
 
   &--links {
@@ -61,6 +65,7 @@ body {
   }
 
   &--quote {
+    margin-top: 100px;
     border-left: none;
   }
 }
@@ -68,9 +73,9 @@ body {
 .main-content {
   position: absolute;
   width: 100%;
-  top: 20%;
+  top: 10%;
   overflow: scroll;
-  height: 80%;
+  height: 90%;
 
   h1 {
     color: #02362E;
