@@ -72,9 +72,9 @@ body {
 .main-content {
   position: absolute;
   width: 100%;
-  top: 11%;
   overflow: scroll;
-  height: 89%;
+  top: 19%;
+  height: 81%;
 
   h1 {
     color: #02362E;
@@ -99,6 +99,12 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+
+  }
+
+  .main-content {
+    top: 11%;
+    height: 89%;
   }
 
   /* Remove the padding we set earlier */
