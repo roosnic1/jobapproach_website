@@ -125,3 +125,10 @@ body {
     border-bottom: 0;
   }
 }
+
+@media screen and (min-width: 1170px){
+  .header--image {
+    width: 75%;
+    left: 12.5%;
+  }
+}
