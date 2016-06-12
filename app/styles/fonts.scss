@@ -1,0 +1,31 @@
+$font-path: '../fonts/';
+
+@font-face {
+  font-family: 'GT-Pressura-light';
+  src: url($font-path + 'GT-Pressura-Light.eot'); /* IE9 Compat Modes */
+  src: url($font-path + 'GT-Pressura-lLght.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  //url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url($font-path +  'GT-Pressura-Light.woff') format('woff'), /* Pretty Modern Browsers */
+  url($font-path + 'GT-Pressura-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+  //url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'GT-Pressura-Regular';
+  src: url($font-path + 'GT-Pressura-Regular.eot'); /* IE9 Compat Modes */
+  src: url($font-path + 'GT-Pressura-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url($font-path +  'GT-Pressura-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url($font-path + 'GT-Pressura-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  //url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'GT-Pressura-Mono-Light';
+  src: url($font-path + 'GT-Pressura-Mono-Light.eot'); /* IE9 Compat Modes */
+  src: url($font-path + 'GT-Pressura-Mono-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    //url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url($font-path +  'GT-Pressura-Mono-Light.woff') format('woff'), /* Pretty Modern Browsers */
+  url($font-path + 'GT-Pressura-Mono-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+  //url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

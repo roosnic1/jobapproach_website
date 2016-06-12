@@ -4,6 +4,9 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+//import fonts
+@import './fonts';
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -36,6 +39,12 @@ body {
   height: 500px;
   overflow: hidden;
 
+  li {
+    a {
+      font-family: GT-Pressura-Regular;
+    }
+  }
+
   a:hover {
     text-decoration: none;
   }
@@ -66,6 +75,15 @@ body {
   &--quote {
     margin-top: 100px;
     border-left: none;
+
+    p {
+      font-family: GT-Pressura-Mono-Light;
+      font-size: 25px;
+    }
+
+    footer {
+      font-family: GT-Pressura-Regular;
+    }
   }
 }
 
@@ -78,19 +96,46 @@ body {
 
   h1 {
     color: #02362E;
-    font-size: 36;
+    font-size: 36px;
+    font-family: GT-Pressura-light;
   }
 
   .service {
     margin-top: 140px;
 
-    p {
+    p, li {
       font-size: 15px;
+      font-family: GT-Pressura-light;
+    }
+
+    .sub-header {
+      font-family: GT-Pressura-Regular;
     }
   }
 
   .block {
     margin-top: 100px;
+  }
+
+  .about, .links {
+    p, li {
+      font-size: 15px;
+      font-family: GT-Pressura-light;
+    }
+
+    a {
+      font-family: GT-Pressura-light;
+    }
+  }
+
+  .contact {
+    p, input {
+      font-family: GT-Pressura-Mono-Light;
+    }
+
+    .slightly-larger {
+      font-size: 20px;
+    }
   }
 }
 
@@ -136,7 +181,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1170px){
+@media screen and (min-width: 1530px){
   .header--image {
     width: 75%;
     left: 12.5%;
