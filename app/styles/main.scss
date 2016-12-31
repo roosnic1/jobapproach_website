@@ -20,6 +20,27 @@ body {
   padding-bottom: 20px;
 }
 
+.under-construction {
+  .under-construction-info {
+    display: block;
+    p {
+      margin-top: 200px;
+      font-size: 40px;
+    }
+  }
+  .main-content {
+    display: none;
+  }
+
+  .header--links {
+    display: none;
+  }
+}
+
+.under-construction-info {
+  display: none;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .marketing,
 .footer {
